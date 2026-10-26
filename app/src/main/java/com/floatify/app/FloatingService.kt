@@ -118,6 +118,7 @@ class FloatingService : Service() {
         root.addView(
             when (app.id) {
                 "calc" -> CalculatorView.create(this)
+                "files" -> FileManagerView.create(this)
                 else -> TextView(this).apply {
                     text = "Placeholder window for ${app.name}.\n\nThe real ${app.name} will live here. Drag the title bar to move this window."
                     setTextColor(0xFF333333.toInt())
